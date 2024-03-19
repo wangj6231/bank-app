@@ -53,7 +53,7 @@ def login_click():
 
     username = entry_username.get()
     password = entry_password.get()
-    if username == 'wangj6231' and password == '24376874':
+    if username == '000' and password == '000':
         global wang_bank
         wang_bank = Banks('王俊麒', password, 3000)
         label_name.config(text=f'姓名: {wang_bank.username}')
