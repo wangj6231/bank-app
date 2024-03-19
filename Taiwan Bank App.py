@@ -55,7 +55,7 @@ def login_click():
     password = entry_password.get()
     if username == '000' and password == '000':
         global wang_bank
-        wang_bank = Banks('王俊麒', password, 3000)
+        wang_bank = Banks('Wang', password, 3000)
         label_name.config(text=f'姓名: {wang_bank.username}')
         label_balance.config(text=f'餘額: {wang_bank.get_balance()}')
         output_text.delete('1.0', tk.END)
@@ -110,7 +110,7 @@ def transfer_click():
 
     amount = int(entry_amount.get())
     transfer_to = entry_transfer_to.get()
-    if transfer_to == '王俊麒':
+    if transfer_to == 'Wang':
         output_text.insert(tk.END, '不能轉帳給自己\n')
     else:
         other_bank = Banks(transfer_to, 'dummy', 0)  # 假設其他帳戶名稱為 transfer_to
